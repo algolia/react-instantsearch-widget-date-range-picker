@@ -1,0 +1,24 @@
+:root {
+  --duet-color-primary: #3c4ee0;
+  --duet-color-text: #333;
+  --duet-color-text-active: #fff;
+  --duet-color-placeholder: #666;
+  --duet-color-button: #f5f5f5;
+  --duet-color-surface: #fff;
+  --duet-color-overlay: rgba(0, 0, 0, 0.8);
+  --duet-color-border: #d6d6e7;
+
+  --duet-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  --duet-font-normal: 400;
+  --duet-font-bold: 600;
+
+  --duet-radius: 3px;
+  --duet-z-index: 600;
+}
+
+duet-date-picker .duet-date__input {
+  background-color: #fff;
+  box-shadow: inset 0 1px 4px 0 rgba(119, 122, 175, 0.3);
+  color: #23263b;
+}
