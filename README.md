@@ -6,6 +6,10 @@ InstantSearch widget that makes a date range picker
 
 [![MIT](https://img.shields.io/npm/l/@eunjae-lee/react-instantsearch-widget-date-range-picker)](./LICENSE) [![NPM version](http://img.shields.io/npm/v/@eunjae-lee/react-instantsearch-widget-date-range-picker.svg)](https://npmjs.org/package/@eunjae-lee/react-instantsearch-widget-date-range-picker)
 
+## Demo
+
+[Demo](https://codesandbox.io/s/funny-wright-pr9ou?file=/src/App.js) on CodeSandbox.
+
 ## Install
 
 ```bash
