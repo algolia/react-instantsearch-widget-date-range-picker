@@ -24,10 +24,11 @@ import algoliasearch from 'algoliasearch/lite';
 import { DateRangePicker } from '@eunjae-lee/react-instantsearch-widget-date-range-picker';
 
 const searchClient = algoliasearch('appId', 'apiKey');
+const attribute = '<your-attribuet-for-faceting>';
 
 const App = () => (
   <InstantSearch searchClient={searchClient} indexName="indexName">
-    <DateRangePicker />
+    <DateRangePicker attribute={attribute} />
   </InstantSearch>
 );
 ```
@@ -36,38 +37,45 @@ const App = () => (
 
 | Option | Type | Required | Default | Description |
 | :-- | :-- | :-- | :-- | --- |
-| [`option1`](#option1) | `string` | true | - | REPLACE WITH THE DESCRIPTION FOR THIS OPTION |
+| [`attribute`](#attribute) | `string` | true | - | Name of the attribute for faceting |
+| [`datePickerProps`](#datePickerProps) | `object` | false | undefined | Props for @duetds/date-picker component |
 
-#### option1
+#### attribute
 
 > `string` | **required**
 
-REPLACE WITH THE DESCRIPTION FOR THIS OPTION
-
-## Connector
-
-### Usage
+Name of the attribute for faceting.
 
 ```jsx
-import { connectDateRangePicker } from '@eunjae-lee/react-instantsearch-widget-date-range-picker';
+<DateRangePicker attribute="date" />
+```
 
-// 1. Create a render function
-const RenderDateRangePicker = (renderOptions, isFirstRender) => {
-  // Rendering logic
+#### datePickerProps
+
+> `object` | **optional**
+
+Props for [@duetds/date-picker](https://github.com/duetds/date-picker#usage-with-react) component.
+
+```jsx
+const datePickerProps = {
+  dateAdapter: {
+    parse(dateString) {
+      // ...
+    },
+    format(date) {
+      // ...
+    },
+  },
+  localization: {
+    // ...
+  },
+  // ...
 };
 
-// 2. Create the custom widget
-const CustomDateRangePicker = connectDateRangePicker(
-  RenderDateRangePicker
-);
-
-// 3. Instantiate
-const App = () => (
-  <InstantSearch searchClient={searchClient} indexName="indexName">
-    <CustomDateRangePicker />
-  </InstantSearch>
-);
+<DateRangePicker attribute="date" datePickerProps={datePickerProps} />;
 ```
+
+You can see [an example here](./example/datePickerProps.ts).
 
 ## Contributing
 
