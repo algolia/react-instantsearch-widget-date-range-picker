@@ -8,7 +8,7 @@ InstantSearch widget that makes a date range picker
 
 ## Demo
 
-[Demo](https://codesandbox.io/s/funny-wright-pr9ou?file=/src/App.js) on CodeSandbox.
+[Demo](https://codesandbox.io/s/github/algolia/react-instantsearch-widget-date-range-picker?file=/example/index.tsx) on CodeSandbox.
 
 ## Install
 
