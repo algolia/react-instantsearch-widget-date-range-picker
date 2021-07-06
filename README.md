@@ -1,7 +1,3 @@
-# date-range-picker
-
-InstantSearch widget that makes a date range picker
-
 ---
 
 [![MIT](https://img.shields.io/npm/l/@algolia/react-instantsearch-widget-date-range-picker)](./LICENSE) [![NPM version](http://img.shields.io/npm/v/@algolia/react-instantsearch-widget-date-range-picker.svg)](https://npmjs.org/package/@algolia/react-instantsearch-widget-date-range-picker)
