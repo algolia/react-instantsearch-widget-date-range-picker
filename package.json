@@ -1,5 +1,5 @@
 {
-  "name": "@eunjae-lee/react-instantsearch-widget-date-range-picker",
+  "name": "@algolia/react-instantsearch-widget-date-range-picker",
   "version": "1.0.0",
   "description": "InstantSearch widget that makes a date range picker",
   "keywords": [

@@ -4,7 +4,7 @@ InstantSearch widget that makes a date range picker
 
 ---
 
-[![MIT](https://img.shields.io/npm/l/@eunjae-lee/react-instantsearch-widget-date-range-picker)](./LICENSE) [![NPM version](http://img.shields.io/npm/v/@eunjae-lee/react-instantsearch-widget-date-range-picker.svg)](https://npmjs.org/package/@eunjae-lee/react-instantsearch-widget-date-range-picker)
+[![MIT](https://img.shields.io/npm/l/@algolia/react-instantsearch-widget-date-range-picker)](./LICENSE) [![NPM version](http://img.shields.io/npm/v/@algolia/react-instantsearch-widget-date-range-picker.svg)](https://npmjs.org/package/@algolia/react-instantsearch-widget-date-range-picker)
 
 ## Demo
 
@@ -13,9 +13,9 @@ InstantSearch widget that makes a date range picker
 ## Install
 
 ```bash
-npm install @eunjae-lee/react-instantsearch-widget-date-range-picker
+npm install @algolia/react-instantsearch-widget-date-range-picker
 # or
-yarn add @eunjae-lee/react-instantsearch-widget-date-range-picker
+yarn add @algolia/react-instantsearch-widget-date-range-picker
 ```
 
 ## Widget
@@ -25,7 +25,7 @@ yarn add @eunjae-lee/react-instantsearch-widget-date-range-picker
 ```jsx
 import instantsearch from 'instantsearch.js';
 import algoliasearch from 'algoliasearch/lite';
-import { DateRangePicker } from '@eunjae-lee/react-instantsearch-widget-date-range-picker';
+import { DateRangePicker } from '@algolia/react-instantsearch-widget-date-range-picker';
 
 const searchClient = algoliasearch('appId', 'apiKey');
 const attribute = '<your-attribuet-for-faceting>';
