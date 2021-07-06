@@ -42,8 +42,13 @@ export const DateRangePickerComponent = (props: Props) => {
         value={endDate}
         min={beginDate}
         duetChange={(event: any) => {
-          setEndDate(event.detail.value);
-          refine(beginDate, event.detail.value);
+          if (beginDate && new Date(event.detail.value) < new Date(beginDate)) {
+            setBeginDate(null);
+            refine(null, event.detail.value);
+          } else {
+            setEndDate(event.detail.value);
+            refine(beginDate, event.detail.value);
+          }
         }}
       />
     </div>
