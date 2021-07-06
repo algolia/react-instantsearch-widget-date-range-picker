@@ -14,6 +14,14 @@ npm install @algolia/react-instantsearch-widget-date-range-picker
 yarn add @algolia/react-instantsearch-widget-date-range-picker
 ```
 
+This widget is using `@duetds/date-picker` under the hood, so you need to include this at the end of `<head>` tag.
+
+```html
+<script type="module" src="https://cdn.jsdelivr.net/npm/@duetds/date-picker@1.4.0/dist/duet/duet.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@duetds/date-picker@1.4.0/dist/duet/duet.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@duetds/date-picker@1.4.0/dist/duet/themes/default.css" />
+```
+
 ## Widget
 
 ### Usage
