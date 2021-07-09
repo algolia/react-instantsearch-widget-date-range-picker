@@ -46,7 +46,7 @@ ReactDOM.render(
     <InstantSearch indexName="airbnb_with_date" searchClient={searchClient}>
       <SearchBox />
       {/* <DateRangePicker attribute="date" datePickerProps={datePickerProps} /> */}
-      <DateRangePicker attribute="date" />
+      <DateRangePicker attribute="date" min="2021-07-15" />
       <Hits hitComponent={Hit} />
       <Pagination />
     </InstantSearch>
