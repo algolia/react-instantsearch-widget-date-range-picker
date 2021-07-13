@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/algolia/react-instantsearch-widget-date-range-picker/compare/v1.1.0...v1.1.1) (2021-07-13)
+
+
+### Bug Fixes
+
+* remove min / max widget params ([fd65d41](https://github.com/algolia/react-instantsearch-widget-date-range-picker/commit/fd65d41856aaf19f2797447138a043630d2abcfd))
+
 ## 1.1.0 (2021-07-09)
 
 
