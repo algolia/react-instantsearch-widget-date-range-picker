@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import { DatePicker } from './DatePicker';
+import { localization as defaultLocalization } from './defaultLocalization';
 
 type RefineProps = {
   min?: number;
@@ -10,6 +11,15 @@ type RefineProps = {
 type Props = {
   refine: (nextRefinement: RefineProps) => void;
   datePickerProps: any;
+  min: any;
+  max: any;
+};
+
+const convertToString = (timestamp: number) => {
+  const date = new Date(timestamp);
+  return `${date.getFullYear()}-${date.getMonth() < 9 ? '0' : ''}${
+    date.getMonth() + 1
+  }-${date.getDate() < 10 ? '0' : ''}${date.getDate()}`;
 };
 
 export const DateRangePickerComponent = (props: Props) => {
@@ -22,11 +32,20 @@ export const DateRangePickerComponent = (props: Props) => {
     props.refine({ min, max });
   };
 
+  const { dateAdapter = undefined, localization = defaultLocalization } =
+    props.datePickerProps || {};
+
   return (
     <div className="date-range-picker">
       <DatePicker
-        {...props.datePickerProps}
+        dateAdapter={dateAdapter}
+        localization={{
+          ...localization,
+          placeholder: convertToString(props.min),
+        }}
         value={beginDate}
+        min={convertToString(props.min)}
+        max={convertToString(props.max)}
         duetChange={(event: any) => {
           setBeginDate(event.detail.value);
           if (endDate && new Date(event.detail.value) > new Date(endDate)) {
@@ -38,9 +57,14 @@ export const DateRangePickerComponent = (props: Props) => {
         }}
       />
       <DatePicker
-        {...props.datePickerProps}
+        dateAdapter={dateAdapter}
+        localization={{
+          ...localization,
+          placeholder: convertToString(props.max),
+        }}
         value={endDate}
         min={beginDate}
+        max={convertToString(props.max)}
         duetChange={(event: any) => {
           if (beginDate && new Date(event.detail.value) < new Date(beginDate)) {
             setBeginDate(null);

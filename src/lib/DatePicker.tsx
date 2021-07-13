@@ -36,9 +36,14 @@ export const DatePicker = ({
   useEffect(() => {
     if (ref.current !== null) {
       (ref.current! as any).localization = localization;
+    }
+  }, [localization]);
+
+  useEffect(() => {
+    if (ref.current !== null) {
       (ref.current! as any).dateAdapter = dateAdapter;
     }
-  }, [localization, dateAdapter]);
+  }, [dateAdapter]);
 
   // @ts-expect-error ts doesn't know this custom element
   return <duet-date-picker ref={ref} {...props}></duet-date-picker>;
