@@ -9,8 +9,6 @@ type RefineProps = {
 
 type Props = {
   refine: (nextRefinement: RefineProps) => void;
-  minString?: string;
-  maxString?: string;
   datePickerProps: any;
 };
 
@@ -29,7 +27,6 @@ export const DateRangePickerComponent = (props: Props) => {
       <DatePicker
         {...props.datePickerProps}
         value={beginDate}
-        min={props.minString}
         duetChange={(event: any) => {
           setBeginDate(event.detail.value);
           if (endDate && new Date(event.detail.value) > new Date(endDate)) {
@@ -44,7 +41,6 @@ export const DateRangePickerComponent = (props: Props) => {
         {...props.datePickerProps}
         value={endDate}
         min={beginDate}
-        max={props.maxString}
         duetChange={(event: any) => {
           if (beginDate && new Date(event.detail.value) < new Date(beginDate)) {
             setBeginDate(null);
