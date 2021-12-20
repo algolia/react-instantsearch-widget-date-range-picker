@@ -34,6 +34,16 @@ export const DatePicker = ({
   useListener(ref, 'duetClose', duetClose);
 
   useEffect(() => {
+    if (!customElements.get('duet-date-picker')) {
+      // eslint-disable-next-line no-console
+      console.warn(
+        '<DateRangePicker> depends on @duetds/date-picker but could not be found.\n',
+        'See https://github.com/algolia/react-instantsearch-widget-date-range-picker#install for more information.'
+      );
+    }
+  }, []);
+
+  useEffect(() => {
     if (ref.current !== null) {
       (ref.current! as any).localization = localization;
     }
