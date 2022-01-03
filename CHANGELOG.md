@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://github.com/algolia/react-instantsearch-widget-date-range-picker/compare/v1.1.1...v1.1.2) (2022-01-03)
+
+
+### Bug Fixes
+
+* display warning if picker custom component is missing ([#1](https://github.com/algolia/react-instantsearch-widget-date-range-picker/issues/1)) ([0ea04b8](https://github.com/algolia/react-instantsearch-widget-date-range-picker/commit/0ea04b88cecdac4d749f982ec9b38b2224c8ee82))
+
 ### [1.1.1](https://github.com/algolia/react-instantsearch-widget-date-range-picker/compare/v1.1.0...v1.1.1) (2021-07-13)
 
 
